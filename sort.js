@@ -56,6 +56,7 @@ function subQuikSort(arr,start,end){
 function quikSort(){
 	return subQuikSort(arr,0,arr.length-1);
 }
+
 function swap(arr,i,j){
 	var temp = arr[i];
 	arr[i]=arr[j];

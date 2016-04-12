@@ -1,5 +1,6 @@
 var arr = [10,9,19,8,23,7,3];
 document.querySelector(".left").innerHTML = arr.toString();
+/*冒泡排序法*/
 function bubbleSort(){
 	for (var i = arr.length-1; i > 0; i--) {
 		for(var j= 0;j<i;j++){
@@ -10,6 +11,7 @@ function bubbleSort(){
 	}
 	document.querySelector(".right").innerHTML = "冒泡排序结果： "+arr.toString();
 }
+/*选择排序法*/
 function selectSort(){
 	for (var i = 0; i < arr.length; i++) {
 		var min = i;
@@ -22,6 +24,7 @@ function selectSort(){
 	}
 	document.querySelector(".right").innerHTML = "选择排序结果： "+arr.toString();
 }
+/*插入排序法*/
 function insertSort(){
 	for (var i = 1; i < arr.length; i++) {
 		var j = i;
@@ -33,6 +36,7 @@ function insertSort(){
 	}
 	document.querySelector(".right").innerHTML = "插入排序结果： "+arr.toString();
 }
+/*快速排序法*/
 function subQuikSort(arr,start,end){
 	if(end>start){
 		var temp = arr[start],

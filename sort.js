@@ -22,10 +22,23 @@ function selectSort(){
 	}
 	document.querySelector(".right").innerHTML = "选择排序结果： "+arr.toString();
 }
+function insertSort(){
+	for (var i = 1; i < arr.length; i++) {
+		var j = i;
+		var temp = arr[i];
+		while(j>0&&temp<arr[j-1]){
+			arr[j]=arr[--j];
+		}
+		arr[j] = temp;
+	}
+	document.querySelector(".right").innerHTML = "插入排序结果： "+arr.toString();
+}
 function swap(arr,i,j){
 	var temp = arr[i];
 	arr[i]=arr[j];
 	arr[j] = temp;
 }
+
 EventUtil.addEvent(document.querySelector(".bubbleSort"),"click",bubbleSort);
 EventUtil.addEvent(document.querySelector(".selectSort"),"click",selectSort);
+EventUtil.addEvent(document.querySelector(".insertSort"),"click",insertSort);
